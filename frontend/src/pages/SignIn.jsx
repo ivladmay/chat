@@ -14,9 +14,9 @@ import { useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
-import signIn from '../store/entities/auth/authThunk';
+import { signIn } from '../store/entities/auth/authThunk';
 import { routes } from '../utils/routes';
-import signInSchema from '../utils/validation';
+import { signInSchema } from '../utils/validation';
 import signInImg from '../assets/signIn.jpg';
 
 const SignInPage = () => {

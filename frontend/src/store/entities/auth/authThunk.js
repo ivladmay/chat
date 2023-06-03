@@ -1,10 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import signInApi from '../../../api/auth';
+import { signInApi, signUpApi } from '../../../api/auth';
 
-const signIn = createAsyncThunk(
+export const signIn = createAsyncThunk(
   'signIn',
   (values) => signInApi(values),
 );
 
-export default signIn;
+export const signUp = createAsyncThunk(
+  'signUp',
+  (values) => signUpApi(values),
+);
