@@ -10,6 +10,11 @@ export default {
       noAccount: 'Нет аккаунта? ',
       registration: 'Регистрация',
     },
+    notFound: {
+      notFound: 'Страница не найдена',
+      redirect: 'Но вы можете перейти ',
+      mainPage: 'на главную страницу',
+    },
     signUp: {
       registration: 'Регистрация',
       signUp: 'Зарегистрироваться',
