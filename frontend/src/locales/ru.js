@@ -1,5 +1,7 @@
 export default {
   translation: {
+    hexlet: 'Chat',
+    logOut: 'Выйти',
     networkError: 'Ошибка соединения',
     signIn: {
       enter: 'Войти',
@@ -9,6 +11,38 @@ export default {
       required: 'Обязательное поле',
       noAccount: 'Нет аккаунта? ',
       registration: 'Регистрация',
+    },
+    channels: {
+      channels: 'Каналы',
+      created: 'Канал создан',
+      removed: 'Канал удалён',
+      renamed: 'Канал переименован',
+      creationError: 'Ошибка при создании канала',
+      removingError: 'Ошибка при удалении канала',
+      renamingError: 'Ошибка при переименовании канала',
+    },
+    chat: {
+      messageCount_one: '{{count}} сообщение',
+      messageCount_few: '{{count}} сообщения',
+      messageCount_many: '{{count}} сообщений',
+      newMessage: 'Новое сообщение',
+      enterMessage: 'Введите сообщение...',
+      submit: 'Отправить',
+    },
+    modals: {
+      addChannel: 'Добавить канал',
+      channelName: 'Имя канала',
+      required: 'Обязательное поле',
+      lengthParams: 'От 3 до 20 символов',
+      uniqueName: 'Должно быть уникальным',
+      cancel: 'Отменить',
+      submit: 'Отправить',
+      channelControl: 'Управление каналом',
+      remove: 'Удалить',
+      rename: 'Переименовать',
+      removeChannel: 'Удалить канал',
+      confirmation: 'Уверены?',
+      renameChannel: 'Переименовать канал',
     },
     notFound: {
       notFound: 'Страница не найдена',

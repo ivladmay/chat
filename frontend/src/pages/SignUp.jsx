@@ -8,6 +8,7 @@ import {
   Image,
   Button,
 } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
@@ -16,9 +17,11 @@ import { toast } from 'react-toastify';
 import signUpImg from '../assets/signUp.jpg';
 import { signUpSchema } from '../utils/validation';
 import { signUp } from '../store/entities/auth/authThunk';
+import { routes } from '../utils/routes';
 
 const SignUp = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const inputRef = useRef();
 
@@ -45,6 +48,7 @@ const SignUp = () => {
         setSubmitting(true);
         await dispatch(signUp(values));
         setSignUpFailed(false);
+        navigate(routes.chat);
       } catch (error) {
         setSubmitting(false);
         if (error.isAxiosError && error.response.status === 409) {

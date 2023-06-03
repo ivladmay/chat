@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   Container,
@@ -20,6 +20,7 @@ import { signInSchema } from '../utils/validation';
 import signInImg from '../assets/signIn.jpg';
 
 const SignInPage = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const inputRef = useRef(null);
@@ -41,6 +42,7 @@ const SignInPage = () => {
         setSubmitting(true);
         await dispatch(signIn(values));
         setAuthFailed(false);
+        navigate(routes.chat);
       } catch (error) {
         setSubmitting(false);
         if (error.isAxiosError && error.response.status === 401) {
